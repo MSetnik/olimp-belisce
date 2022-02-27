@@ -1,0 +1,42 @@
+.about-container {
+    padding: 100px 0;
+}
+
+.about-title-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.about-title-div h1{
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+    
+}
+
+.about-title-div p{
+    font-family: 'Roboto', sans-serif;
+}
+
+.about-content{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.about-content p{
+    font-size: 18px;
+    line-height: 32px;
+    color: rgb(83, 83, 83);
+}
+
+.about-content-img-div {
+    margin-left: 120px;
+}
+
+.about-content-img-div img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}

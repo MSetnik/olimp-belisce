@@ -1,0 +1,31 @@
+.contact-container{
+    display: flex;
+    /* justify-content: space-evenly; */
+    padding: 100px 0;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-container h1{
+    margin-bottom: 60px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+}
+
+.contact-container-row {
+    display: flex;
+    flex:1
+}   
+
+
+.contact-form-col{
+    display: flex;
+    justify-content: center;
+
+}
+
+.contact-map-col{
+    display: flex;
+    width: 400px;
+}

@@ -1,0 +1,49 @@
+.container-background {
+    /* background-color: red; */
+    background-image: url('../../../assets//main-container//olimp-belisce.jpeg');
+    /* aspect-ratio: 16/9; */
+    width: 100%;
+    height: 950px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -64px;
+    /* background-color: rgba(0,0,0,0.2); */
+
+}
+
+#overlay {
+    position: inherit; /* Sit on top of the page content */
+    display: flex; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    /* cursor: pointer; Add a pointer on hover */
+  }
+
+.main-container{
+    text-align: center;
+}
+
+#title-city {
+    font-size: 32px;
+    letter-spacing: 12px;
+    color: rgba(255,255,255,1);
+    font-family: 'Roboto', sans-serif;
+
+}
+
+#main-title {
+    font-size: 200px;
+    color: #a81d08;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 30px;
+
+}

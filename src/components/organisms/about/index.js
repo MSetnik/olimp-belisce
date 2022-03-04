@@ -1,11 +1,12 @@
 import "./index.css";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import img from "../../../assets/main-container/logo.png";
+import { isInViewport } from "../../../helpers";
 
 const About = () => {
   return (
-    <div id='about' className='container about-container'>
+    <div id='about' className='container about-container scroll-content'>
       <div className='about-title-div'>
         <h1>TKO SMO MI?</h1>
         <h5>NAJBOLJA TERETANA U VALPOVŠTINI</h5>
@@ -27,6 +28,7 @@ const About = () => {
           <img src={img} />
         </div>
       </div>
+
     </div>
   );
 };

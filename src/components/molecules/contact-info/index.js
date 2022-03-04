@@ -38,7 +38,7 @@ const ContactInfo = () => {
         </div>
       </div>
 
-      <div className="contact-info-row">
+      <div id="working-hours"className="contact-info-row">
         <BiTimeFive color="#a81d08" size={24}/>
         <div className="contact-info-details">
           <h5>Radno vrijeme:</h5>

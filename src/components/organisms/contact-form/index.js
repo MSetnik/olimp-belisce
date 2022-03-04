@@ -55,7 +55,6 @@ const ContactForm = () => {
         .then((result) => {
           setTimeout(() => {
             setIsLoading(false);
-            console.log(result.text);
             if (result.status === 200) {
               setSuccess(true);
             }

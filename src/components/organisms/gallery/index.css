@@ -1,7 +1,17 @@
 .gallery-container {
     background-color: rgb(36, 36, 36);
-    padding: 100px 0;
+    padding: 200px 0;
 
+    transform: skewy(3deg); /* angle you want */
+    transform-origin: bottom left;
+   
+    
+
+}
+
+.gallery-content {
+    transform: skewy( -3deg); /* angle you want */
+    transform-origin: bottom left;
 }
 
 .gallery-title {
@@ -21,7 +31,6 @@
 }
 
 .carousel-item  {
-   
     height: 100%;
 }
 

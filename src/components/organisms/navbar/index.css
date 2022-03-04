@@ -1,6 +1,73 @@
-.navbar-div{
+/* animations */
+@keyframes linkBorderWidthAnimSlideIn {
+    from 
+    {
+        width: 0%;
+    }
+    to 
+    {
+        width: 100%;
+    }
+  }
+
+  @keyframes linkBorderWidthAnimSlideOut {
+    from 
+    {
+        width: 100%;
+    }
+    to 
+    {
+        width: 0%;
+    }
+  }
+
+  /* animations */
+@keyframes changeColor {
+    from 
+    {
+       
     background-color: rgba(0,0,0,0.3);
-    position: relative;
+    }
+    to 
+    {
+       
+    background-color: black !important;
+    }
+  }
+
+  @keyframes linkBorderWidthAnimSlideOut1 {
+    from 
+    {
+        color:rgba(0,0,0,0.3) !important; 
+        height: 100px;
+    }
+    to 
+    {
+        color:rgba(0,0,0,1) !important;
+        height: 64px;
+
+
+    }
+  }
+
+  .sticky {
+    position: fixed !important;
+    top: 0;
+    height: 64px !important;
+    width: 100%;
+    /* animation-name: linkBorderWidthAnimSlideOut1;
+    animation-duration: 1s; */
+    z-index: 99;
+    transition: height 0.1s linear;
+
+  }
+
+.navbar-div{
+    background-color: rgba(0,0,0,1);
+    /* position: inherit; */
+    height: 120px;
+    transition: height 0.1s linear;
+
 }
 /* 
 .container {
@@ -11,8 +78,8 @@
 
 #navbar-container {
     display: flex;
-    height: 64px;
     align-items: center;
+    height: 100%;
     /* padding: 0 80px; */
     z-index: 9;
     justify-content: space-between;
@@ -31,6 +98,7 @@
     display: flex;
     justify-content: space-around;
     flex: 0.55;
+    height: 100%;
 }
 
 .col {
@@ -38,14 +106,56 @@
     justify-content: space-between;
 }
 
+
 .link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: white;
     font-weight: 600;
     font-size: 16;
     text-transform: uppercase;
 }
 
+
+.link-border-top {
+    visibility: hidden;
+    height: 2px;
+    /* animation-name: linkBorderWidthAnimSlideOut;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; */
+    width: 0%;
+    background-color: red;
+    flex-direction: column;
+   
+}
+
+.link-selected{
+    /* height: 2px;
+    width: 100% !important;
+    background-color: rgb(137, 6, 245) !important;
+    flex-direction: column; */
+    width: 100% !important;
+    background-color: red !important;
+   transition: width 1s ease;
+}
+
 .link a {
+    display: flex;
+    flex:1;
     text-decoration: none;
     color: white;
+    align-items: center;
+}
+
+.link:hover > .link-border-top {
+  animation-name: linkBorderWidthAnimSlideIn;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.link:not(:hover) > .link-border-top {
+    animation-name: linkBorderWidthAnimSlideOut;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
 }

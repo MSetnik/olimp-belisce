@@ -6,7 +6,7 @@ const PriceList = () => {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <div id="price-list" className='price-list'>
+    <div id="price-list" className='scroll-content price-list'>
       <div className={"container price-list-container"}
       >
         <div className='price-list-title-div'>

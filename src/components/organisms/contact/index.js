@@ -5,7 +5,7 @@ import "./index.css";
 
 const Contact = () => {
   return (
-    <div id="contact" className="contact-container">
+    <div id="contact" className="contact-container scroll-content">
       <div className="container">
         <div className='contact-title-div'>
           <h1>KONTAKTIRAJTE NAS</h1>

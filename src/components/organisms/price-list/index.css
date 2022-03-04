@@ -8,6 +8,8 @@
     /* Safari and Chrome */
     -o-transition: height 2s;
     /* Opera */
+    transition: height 0.1s linear  !important;
+
 }
 
 .show {
@@ -33,7 +35,7 @@
 }
 
 .price-list {
-    padding: 100px 0;
+    padding: 200px 0;
 }
 
 

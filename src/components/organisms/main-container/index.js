@@ -19,17 +19,26 @@ const MainContainer = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  console.log(windowDimensions.height);
+  window.addEventListener("scroll", () => {
+    const mainContainer = document.getElementsByClassName("container-background");
+
+    if (window.pageYOffset >= 10) {
+      mainContainer[0].classList.add("navbar-sticky-margin");
+    } else {
+      mainContainer[0].classList.remove("navbar-sticky-margin");
+    }
+  });
 
   return (
-    <div className='container-background' style={{ height: windowDimensions.height }}>
+    <div id="#" className='container-background' style={{ height: windowDimensions.height }}>
       <div id="overlay">
         <div className='main-container' >
           <h1 id='main-title'>OLIMP</h1>
           <h1 id="title-city">BELIŠĆE</h1>
+          <ScrollDownArrow />
+
         </div>
 
-        <ScrollDownArrow />
       </div>
     </div>
 

@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
 
@@ -15,11 +15,12 @@ import BmiCalculator from "./components/organisms/bmi-calculator";
 import Contact from "./components/organisms/contact";
 import Footer from "./components/organisms/footer";
 import DeveloperInfo from "./components/molecules/developer-info";
+import { isInViewport } from "./helpers";
 
 function App () {
   return (
     <div className='content'>
-      <Navbar link1={"O nama"} link2={"BMI kalkulator"} link3={"Cjenik"} link4={"Kontakt"}/>
+      <Navbar link1={"O nama"} link2={"BMI kalkulator"} link3={"Cjenik"} link4={"Kontakt"} link5={"radno vrijeme"}/>
 
       <MainContainer />
 
@@ -36,6 +37,7 @@ function App () {
       <Footer />
 
       <DeveloperInfo />
+
     </div>
   );
 }

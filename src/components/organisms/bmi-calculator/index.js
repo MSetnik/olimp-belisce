@@ -23,7 +23,6 @@ const BmiCalculator = () => {
   };
 
   const bmiColorSetter = (bmi) => {
-    console.log(parseInt(bmi).toFixed(0));
     let color = "#ffa726";
 
     if (bmi < 16) {
@@ -56,7 +55,7 @@ const BmiCalculator = () => {
   };
 
   return (
-    <div id='bmi-calculator' className='bmi'>
+    <div id='bmi-calculator' className='bmi scroll-content'>
       <div className='container bmi-container'>
         <div className="bmi-container-header">
           <h1>BMI Kalkulator</h1>

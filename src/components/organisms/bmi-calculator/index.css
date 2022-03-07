@@ -207,14 +207,14 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin-top: 250px;
+        margin-top: 300px;
         flex: 1;
         width: 100%;
         left: 0;
     }
 
     .table-col{
-        margin-top: 680px;
+        margin-top: 700px;
         position: absolute;
         width: 100%;
         display: flex;
@@ -224,5 +224,10 @@
     .table-col {
         left: 0;
     }
+
+    .height-div p {
+       text-align:center;
+    }
+
 }
 

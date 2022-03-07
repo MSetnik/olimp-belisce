@@ -20,7 +20,7 @@ const MainContainer = () => {
   }, []);
 
   window.addEventListener("scroll", () => {
-    const mainContainer = document.getElementsByClassName("container-background");
+    const mainContainer = document.getElementsByClassName("header-container");
 
     if (window.pageYOffset >= 10) {
       mainContainer[0].classList.add("navbar-sticky-margin");
@@ -30,16 +30,23 @@ const MainContainer = () => {
   });
 
   return (
-    <div id="#" className='container-background' style={{ height: windowDimensions.height }}>
-      <div id="overlay">
-        <div className='main-container' >
-          <h1 id='main-title'>OLIMP</h1>
-          <h1 id="title-city">BELIŠĆE</h1>
-          <ScrollDownArrow />
+    <div id="#" className='header-container' style={{ height: windowDimensions.height }}>
+      <div className='container-background'>
+        <div id="overlay">
+          <div className='main-container' >
+            <h1 id='main-title'>OLIMP</h1>
+            <h1 id="title-city">BELIŠĆE</h1>
+
+            <div className="scroll-down-arrow">
+              <ScrollDownArrow />
+
+            </div>
+
+          </div>
 
         </div>
-
       </div>
+
     </div>
 
   );

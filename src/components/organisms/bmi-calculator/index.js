@@ -66,7 +66,7 @@ const BmiCalculator = () => {
           <div className="row bmi-rows-container">
             <p>BMI - Indeks tjelesne mase (engl. Body Mass Index) je jedan od načina procjene uhranjenosti. Od svih poznatih indeksa, indeks tjelesne mase je najuže povezan s količinom prekomjernog masnog tkiva u ljudskom tijelu, a uz to ga je relativno jednostavno izračunati ili očitati iz tablica.
 Izračun BMI se temelji na odnosu tjelesne težine i kvadrata visine osobe.</p>
-            <div className='col bmi-container-body'>
+            <div className='col col-4 bmi-container-body'>
               <div className='bmi-container-sliders'>
                 <div className='height-slider'>
                   <div className='height-div'>
@@ -131,16 +131,20 @@ Izračun BMI se temelji na odnosu tjelesne težine i kvadrata visine osobe.</p>
                 </div>
               </div>
 
-              <div className='result-div'>
-                <h3>Vaš BMI</h3>
-                <h1 style={{
-                  color: bmiColor
-                }}>{bmi}</h1>
-              </div>
+            </div>
+
+            <div className='col col-4 result-div'>
+              <h3>Vaš BMI</h3>
+              <h1 style={{
+                color: bmiColor
+              }}>{bmi}</h1>
+            </div>
+
+            <div className="col col-4 table-col">
+              <BmiTable />
 
             </div>
 
-            <BmiTable />
           </div>
         </div>
       </div>

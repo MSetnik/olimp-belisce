@@ -50,37 +50,28 @@
     }
   }
 
-  .sticky {
-    position: fixed !important;
+.sticky {
     top: 0;
     height: 64px !important;
     width: 100%;
-    /* animation-name: linkBorderWidthAnimSlideOut1;
-    animation-duration: 1s; */
     z-index: 99;
-    transition: height 0.1s linear;
+    transition: height 0.1s ease;
 
-  }
+}
 
 .navbar-div{
     background-color: rgba(0,0,0,1);
-    /* position: inherit; */
+    position: fixed !important;
     height: 120px;
-    transition: height 0.1s linear;
+    transition: height 0.1s ease;
+    width: 100%;
 
 }
-/* 
-.container {
-    display: flex;
-    justify-content: space-between;
-} */
-
 
 #navbar-container {
     display: flex;
     align-items: center;
     height: 100%;
-    /* padding: 0 80px; */
     z-index: 9;
     justify-content: space-between;
 
@@ -89,9 +80,14 @@
 #logo-container{
     display: flex;
     justify-content: center;
-    color: white;
-    width: 40px;
-    height: 40px;
+    height: 60%;
+    aspect-ratio: 1/1;
+
+}
+
+#logo-container a {
+    height: 100% !important;
+    display: flex;
 }
 
 #links-container{
@@ -121,9 +117,6 @@
 .link-border-top {
     visibility: hidden;
     height: 2px;
-    /* animation-name: linkBorderWidthAnimSlideOut;
-    animation-duration: 1s;
-    animation-fill-mode: forwards; */
     width: 0%;
     background-color: red;
     flex-direction: column;
@@ -131,10 +124,6 @@
 }
 
 .link-selected{
-    /* height: 2px;
-    width: 100% !important;
-    background-color: rgb(137, 6, 245) !important;
-    flex-direction: column; */
     width: 100% !important;
     background-color: red !important;
    transition: width 1s ease;
@@ -158,4 +147,46 @@
     animation-name: linkBorderWidthAnimSlideOut;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
+}
+
+
+@media screen and (max-width: 1200px) {
+    #links-container{
+        display: flex;
+        justify-content: space-around;
+        flex: 0.75;
+        height: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 992px) {
+    #links-container{
+        display: flex;
+        justify-content: space-around;
+        flex: 0.95;
+        height: 100%;
+    }
+    
+}
+
+
+@media screen and (max-width: 768px) {
+    #links-container{
+        display: none;
+    }
+
+    .navbar-div {
+        position: fixed;
+        height: 56px;
+        flex-direction: column;
+    }
+
+    .sticky {
+        top: 0;
+        height: 56px !important;
+        width: 100%;
+        z-index: 99;
+    }
+    
 }

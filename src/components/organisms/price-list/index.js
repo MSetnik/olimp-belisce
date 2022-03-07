@@ -1,19 +1,26 @@
 import Membership from "../../molecules/membership";
 import "./index.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Button } from "@mui/material";
 
 const PriceList = () => {
   const [showMore, setShowMore] = useState(false);
 
+  useEffect(() => {
+    const d = document.querySelectorAll(".row-price-list");
+
+    console.log(d[0].clientHeight);
+  });
+
   return (
-    <div id="price-list" className='scroll-content price-list'>
+    <div id="price-list" className={"scroll-content price-list "}>
       <div className={"container price-list-container"}
       >
         <div className='price-list-title-div'>
           <h1>CJENIK ČLANARINE</h1>
         </div>
 
-        <div className='row row-cols-auto row-price-list  gx-5'>
+        <div className={"row row-cols-auto row-price-list gx-5 "}>
           <div className='col col-price-list'>
             <Membership name={"polumjesecna"} description={["neogranicen pristup teretani"]} price={75} />
           </div>
@@ -39,7 +46,6 @@ const PriceList = () => {
 
           <div className='col col-price-list'
             style={{ display: showMore ? "flex" : "none" }}
-
           >
             <Membership name={"dnevna"} description={["neogranicen pristup teretani"]} price={25} />
           </div>
@@ -67,8 +73,11 @@ const PriceList = () => {
 
         </div>
 
-        <button onClick={() => setShowMore(!showMore)}>{showMore ? "Prikaži manje" : "Prikaži više" }</button>
-
+        <div className="container show-more-btn-div">
+          <Button variant="outlined"
+            className="show-more-btn"
+            onClick={() => setShowMore(!showMore)}>{showMore ? "Prikaži manje" : "Prikaži više" }</Button>
+        </div>
       </div>
     </div>
   );

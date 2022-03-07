@@ -2,8 +2,6 @@ import "./index.css";
 import React, { useEffect, useRef } from "react";
 
 import logo from "../../../assets/main-container/logo.png";
-import { isInViewport } from "../../../helpers";
-import Scrollspy from "react-scrollspy";
 
 const Navbar = ({
   link1,
@@ -18,7 +16,7 @@ const Navbar = ({
   window.addEventListener("scroll", () => {
     const navbar = document.getElementsByClassName("navbar-div");
 
-    if (window.pageYOffset >= 10) {
+    if (window.pageYOffset >= 100) {
       navbar[0].classList.add("sticky");
     } else {
       navbar[0].classList.remove("sticky");
@@ -65,8 +63,9 @@ const Navbar = ({
         if (window.pageYOffset >= 1600 && window.pageYOffset <= 2400) {
           borderActive.forEach(v => v.classList.remove("link-selected"));
         }
+        console.log(window.pageYOffset);
 
-        if (window.pageYOffset >= 5000) {
+        if (window.pageYOffset >= 5700) {
           const workingHours = document.querySelector("#nav-link-working-hours");
           borderActive.forEach(v => v.classList.remove("link-selected"));
           borderActive[mainSection.length].classList.add("link-selected");
@@ -79,7 +78,9 @@ const Navbar = ({
     <div className='navbar-div'>
       <div className="navbar container" id='navbar-container'>
         <div id='logo-container'>
-          <img src={logo}/>
+          <a className="logo-container-link" href='#'>
+            <img src={logo}/>
+          </a>
         </div>
 
         <div id="links-container">

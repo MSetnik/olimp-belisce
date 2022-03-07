@@ -28,7 +28,9 @@
 
 .bmi-content-body{
     display: flex;
-    margin: auto;
+    width: 100%;
+    flex: 1;
+    justify-content: center;
 }
 
 .bmi-rows-container {
@@ -64,7 +66,8 @@
     height: 200px;
     display: flex;
     flex-direction: column;
-    margin-right: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 .height-div {
@@ -105,7 +108,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
 }
 
 .result-div h1 {
@@ -117,3 +119,110 @@
     margin-bottom: 40px;
     color: white;
 } 
+
+.table-col {
+    justify-content: center;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .bmi{
+        transform: skewy(-3deg); /* angle you want */
+        transform-origin: bottom left;
+        padding: 60px 0 200px 0;
+        display: flex;
+        background-color: rgb(36, 36, 36);
+        justify-content: center;
+        height: 1500px;
+    
+    }
+
+    .bmi-container-body{
+        width: 100%;
+    }
+
+    .bmi-container-sliders{
+        margin-top: 300px;
+        display: flex;
+        flex:1;
+        justify-content: center;
+    }
+
+    .result-div {
+        display: flex;
+        position: absolute;
+        flex:1;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 200px;
+        flex: 1;
+        width: 100%;
+        left: 0;
+    }
+
+    .table-col{
+        margin-top: 750px;
+        position: absolute;
+        width: 100%;
+        display: flex;
+        flex: 1;
+    }
+
+    .table-col {
+        left: 0;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .bmi{
+        transform: skewy(-3deg); /* angle you want */
+        transform-origin: bottom left;
+        padding: 60px 0 200px 0;
+        display: flex;
+        background-color: rgb(36, 36, 36);
+        justify-content: center;
+        height: 1500px;
+    
+    }
+
+    .bmi-container-body{
+        width: 100%;
+    }
+
+    .bmi-container-sliders{
+        margin-top: 250px;
+        display: flex;
+        flex:1;
+        justify-content: center;
+    }
+
+    .result-div {
+        display: flex;
+        position: absolute;
+        flex:1;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 250px;
+        flex: 1;
+        width: 100%;
+        left: 0;
+    }
+
+    .table-col{
+        margin-top: 680px;
+        position: absolute;
+        width: 100%;
+        display: flex;
+        flex: 1;
+    }
+
+    .table-col {
+        left: 0;
+    }
+}
+

@@ -4,9 +4,6 @@
 
     transform: skewy(3deg); /* angle you want */
     transform-origin: bottom left;
-   
-    
-
 }
 
 .gallery-content {
@@ -49,4 +46,14 @@
 
 .carousel-indicators button {
     background-color: #a81d08 !important;
+}
+
+
+
+@media screen and (max-width: 768px) {
+   
+    .gallery-container {
+        padding: 100px 0;
+    }
+
 }

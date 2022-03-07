@@ -12,8 +12,8 @@ const About = () => {
         <h5>NAJBOLJA TERETANA U VALPOVŠTINI</h5>
       </div>
 
-      <div className='about-content'>
-        <div className='about-content-text-div'>
+      <div className='row about-content'>
+        <div className='col col-8 about-content-text-div'>
           <p>Fitness centar Olimp osnovan je u listopadu 2016.godine.
             Vrlo brzo nakon osnivanja postaje jedan od vodećih fitness centara u Belišću.
               Brojimo oko 1000 članova,od kojih je 300-tinjak redovno aktivnih.
@@ -24,7 +24,7 @@ const About = () => {
             Ostvarili smo uspješnu sportsku suradnju sa više sportskih udruga u gradu Belišću, a cilj nam je taj broj povećati.
             U sklopu partnerstva često imamo promotivne akcije za naše članove. Također, povremeno organiziramo edukacijska predavanja vezana uz vježbanje, odnosno zdravi život.</p>
         </div>
-        <div className='about-content-img-div'>
+        <div className='col col-4 about-content-img-div'>
           <img src={img} />
         </div>
       </div>

@@ -5,6 +5,7 @@
     align-content: center;
     justify-content: center;
     text-align: center;
+    width: 50%;
 }
 
 .contact-container h1{
@@ -28,4 +29,16 @@
 .contact-map-col{
     display: flex;
     width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-container {
+        width: 100%;
+    }
+
+    
+    .contact-info-container {
+        margin-top: 100px;
+    }
+    
 }

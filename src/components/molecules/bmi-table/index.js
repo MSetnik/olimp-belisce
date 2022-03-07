@@ -3,7 +3,7 @@ import "./index.css";
 
 const BmiTable = () => {
   return (
-    <div className="col table-container">
+    <div className="table-container">
       <table className="table table-dark">
         <thead className="thead-dark">
           <tr>

@@ -6,12 +6,6 @@ import { Button } from "@mui/material";
 const PriceList = () => {
   const [showMore, setShowMore] = useState(false);
 
-  useEffect(() => {
-    const d = document.querySelectorAll(".row-price-list");
-
-    console.log(d[0].clientHeight);
-  });
-
   return (
     <div id="price-list" className={"scroll-content price-list "}>
       <div className={"container price-list-container"}

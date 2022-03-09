@@ -30,7 +30,7 @@ const MainContainer = () => {
   });
 
   return (
-    <div id="#" className='header-container' style={{ height: windowDimensions.height }}>
+    <div id="#" className='header-container' style={{ height: window.getInnerWidth <= 768 ? "100%" : windowDimensions.height, width: "100%" }}>
       <div className='container-background'>
         <div id="overlay">
           <div className='main-container' >

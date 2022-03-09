@@ -7,14 +7,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* background-color: rgb(41, 40, 40); */
     /* padding: 0 80px; */
-    overflow-x: hidden;
+  overflow-x: hidden;
   background-color: rgb(0, 0, 0);
   position: relative;
   cursor: url('./assets/cursor.svg'), auto;
+  
 }
 
 #root {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 code {
@@ -24,4 +25,17 @@ code {
 
 body p {
   font-family: 'Roboto', sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+      display: flex;
+      width: 100%;
+      flex: 1;
+      justify-content: center;
+    }
 }

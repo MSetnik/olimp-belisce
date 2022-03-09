@@ -63,7 +63,6 @@ const Navbar = ({
         if (window.pageYOffset >= 1600 && window.pageYOffset <= 2400) {
           borderActive.forEach(v => v.classList.remove("link-selected"));
         }
-        console.log(window.pageYOffset);
 
         if (window.pageYOffset >= 5700) {
           const workingHours = document.querySelector("#nav-link-working-hours");

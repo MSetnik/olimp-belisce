@@ -6,7 +6,7 @@ const DeveloperInfo = () => {
     <div className="developer-container">
       <div className="developer-info-div">
         <a href="https://matkosetnik.com">
-              Designed and developed Matko Setnik
+              Developed by Matko Setnik
         </a>
       </div>
     </div>

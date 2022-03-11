@@ -17,7 +17,10 @@ const Contact = () => {
           </div>
 
           <div className="col contact-info-col">
-            <ContactInfo />
+            <div className="contact-info-div">
+              <ContactInfo />
+
+            </div>
           </div>
 
         </div>

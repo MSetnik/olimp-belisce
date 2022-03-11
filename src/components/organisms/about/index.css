@@ -9,14 +9,10 @@
     margin-bottom: 20px;
 }
 
+
 .about-title-div h1{
     font-family: 'Anton', sans-serif;
     letter-spacing: 2px;
-    
-}
-
-.about-title-div p{
-    font-family: 'Roboto', sans-serif;
 }
 
 .about-content{
@@ -41,9 +37,17 @@
     height: 200px;
 }
 
-@media screen and (max-width: 768px) {
+
+
+@media screen and (max-width: 768px){
     .about-container {
         padding: 100px 0;
+    }
+
+
+    .about-title-div h5{
+        margin: 0 24px;
+        text-align: center;
     }
 
     .about-content {
@@ -65,4 +69,5 @@
         justify-content: center;
         /* margin-left: 120px; */
     }
+
 }

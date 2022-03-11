@@ -16,10 +16,18 @@ const Navbar = ({
   window.addEventListener("scroll", () => {
     const navbar = document.getElementsByClassName("navbar-div");
 
-    if (window.pageYOffset >= 100) {
-      navbar[0].classList.add("sticky");
+    if (window.innerWidth >= 768) {
+      if (window.pageYOffset >= 100) {
+        navbar[0].classList.add("sticky");
+      } else {
+        navbar[0].classList.remove("sticky");
+      }
     } else {
-      navbar[0].classList.remove("sticky");
+      if (window.pageYOffset > 0) {
+        navbar[0].classList.add("sticky");
+      } else {
+        navbar[0].classList.remove("sticky");
+      }
     }
   });
 
@@ -49,6 +57,11 @@ const Navbar = ({
     const mainSection = document.querySelectorAll(".scroll-content");
 
     window.onscroll = () => {
+      const root = document.querySelectorAll("#root");
+      console.log(root[0].scrollHeight);
+      console.log(window.pageYOffset);
+      console.log(document.body.scrollHeight - (window.innerHeight / 2) - 700);
+
       mainSection.forEach((v, i) => {
         const rect = v.getBoundingClientRect().y;
         if (rect < window.innerHeight - 200) {
@@ -64,7 +77,7 @@ const Navbar = ({
           borderActive.forEach(v => v.classList.remove("link-selected"));
         }
 
-        if (window.pageYOffset >= 5700) {
+        if (window.pageYOffset >= document.body.scrollHeight - (window.innerHeight / 2) - 700) {
           const workingHours = document.querySelector("#nav-link-working-hours");
           borderActive.forEach(v => v.classList.remove("link-selected"));
           borderActive[mainSection.length].classList.add("link-selected");
@@ -78,7 +91,7 @@ const Navbar = ({
       <div className="navbar container" id='navbar-container'>
         <div id='logo-container'>
           <a className="logo-container-link" href='#'>
-            <img src={logo}/>
+            <img className="logo" src={logo}/>
           </a>
         </div>
 

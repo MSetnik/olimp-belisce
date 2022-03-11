@@ -123,7 +123,12 @@ Izračun BMI se temelji na odnosu tjelesne težine i kvadrata visine osobe.</p>
                           "& .MuiSlider-thumb": {
                             backgroundColor: "white",
                             pointerEvents: "none"
+                          },
+                          ".MuiSlider-thumb": {
+                            pointerEvents: "none"
+
                           }
+
                         }}
 
                       />

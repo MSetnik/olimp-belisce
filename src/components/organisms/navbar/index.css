@@ -182,6 +182,8 @@
     #links-container{
         display: none;
     }
+    
+  
 
     .navbar-div {
         position: relative !important;
@@ -199,6 +201,7 @@
         height: 56px !important;
         width: 100%;
         z-index: 99;
+
     }
 
     #logo-container{
@@ -216,4 +219,22 @@
         height: 80%;
     }
     
+    /* .nav-hamburger-div {
+        margin-right: 20px;
+    }
+
+    .nav-drawer-container{
+        background-color: red;
+        width: 100vh;
+        height: 100vh;
+        position: fixed;
+        z-index: 1000;
+        overflow-y: hidden !important;
+    }
+
+    .navbar-container-drawer-opened {
+        position: fixed;
+    } */
+
+
 }

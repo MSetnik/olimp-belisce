@@ -3,6 +3,8 @@ import React, { useEffect, useRef } from "react";
 
 import logo from "../../../assets/main-container/logo.png";
 
+import { FiMenu } from "react-icons/fi";
+
 const Navbar = ({
   link1,
   link2,
@@ -58,9 +60,6 @@ const Navbar = ({
 
     window.onscroll = () => {
       const root = document.querySelectorAll("#root");
-      console.log(root[0].scrollHeight);
-      console.log(window.pageYOffset);
-      console.log(document.body.scrollHeight - (window.innerHeight / 2) - 700);
 
       mainSection.forEach((v, i) => {
         const rect = v.getBoundingClientRect().y;
@@ -88,7 +87,7 @@ const Navbar = ({
 
   return (
     <div className='navbar-div'>
-      <div className="navbar container" id='navbar-container'>
+      <div className="navbar container navbar-container-drawer-opened" id='navbar-container'>
         <div id='logo-container'>
           <a className="logo-container-link" href='#'>
             <img className="logo" src={logo}/>
@@ -131,10 +130,10 @@ const Navbar = ({
               {link5}
             </a>
           </div>
-
         </div>
 
       </div>
+
     </div>
 
   );

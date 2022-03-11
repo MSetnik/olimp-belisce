@@ -20,6 +20,7 @@ import { isInViewport } from "./helpers";
 function App () {
   return (
     <div className='content'>
+
       <Navbar link1={"O nama"} link2={"BMI kalkulator"} link3={"Cjenik"} link4={"Kontakt"} link5={"radno vrijeme"}/>
 
       <MainContainer />

@@ -12,12 +12,15 @@ const Contact = () => {
         </div>
 
         <div className="row contact-container-row">
-          <div className="col contact-form-col">
+          <div className="col-12 col-sm-12 col-md-6 contact-form-col">
             <ContactForm />
           </div>
 
-          <div className="col contact-info-col">
-            <ContactInfo />
+          <div className="col-12 col-sm-12 col-md-6 contact-info-col">
+            <div className="contact-info-div">
+              <ContactInfo />
+
+            </div>
           </div>
 
         </div>

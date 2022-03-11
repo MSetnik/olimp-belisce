@@ -10,6 +10,11 @@ import { getWindowDimensions } from "../../../helpers";
 
 const MainContainer = () => {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  // const vh = window.innerHeight * 0.01;
+  // // Then we set the value in the --vh custom property to the root of the document
+  // document.documentElement.style.setProperty("--vh", `${vh}px`);
+
   useEffect(() => {
     const handleResize = () => {
       setWindowDimensions(getWindowDimensions());
@@ -19,27 +24,36 @@ const MainContainer = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  window.addEventListener("scroll", () => {
-    const mainContainer = document.getElementsByClassName("container-background");
+  if (window.innerWidth <= 768) {
+    window.addEventListener("scroll", () => {
+      const mainContainer = document.getElementsByClassName("header-container");
 
-    if (window.pageYOffset >= 10) {
-      mainContainer[0].classList.add("navbar-sticky-margin");
-    } else {
-      mainContainer[0].classList.remove("navbar-sticky-margin");
-    }
-  });
+      if (window.pageYOffset > 0) {
+        mainContainer[0].classList.add("navbar-sticky-margin");
+      } else {
+        mainContainer[0].classList.remove("navbar-sticky-margin");
+      }
+    });
+  }
 
   return (
-    <div id="#" className='container-background' style={{ height: windowDimensions.height }}>
-      <div id="overlay">
-        <div className='main-container' >
-          <h1 id='main-title'>OLIMP</h1>
-          <h1 id="title-city">BELIŠĆE</h1>
-          <ScrollDownArrow />
+    <div id="#" className='header-container' >
+      <div className='container-background'>
+        <div id="overlay">
+          <div className='main-container' >
+            <h1 id='main-title'>OLIMP</h1>
+            <h1 id="title-city">BELIŠĆE</h1>
+
+            <div className="scroll-down-arrow">
+              <ScrollDownArrow />
+
+            </div>
+
+          </div>
 
         </div>
-
       </div>
+
     </div>
 
   );

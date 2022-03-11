@@ -23,7 +23,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 400px; 
+  flex: 1;
+  width: 100%; 
 } 
 
 .contact-btn-div {
@@ -51,7 +52,25 @@
 
 }
 
+.contact-form {
+  width: 70%;
+}
+
 .input-name:focus, .input-email:focus, .input-message:focus {
   outline: none;
   border-bottom-color:#a81d08;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-form {
+    width: 80%;
+    display: block;
+  }
+  
 }

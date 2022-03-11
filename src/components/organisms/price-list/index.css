@@ -1,3 +1,4 @@
+
 .price-list-container {
     /* overflow: hidden;
     height: 550px; */
@@ -8,7 +9,15 @@
     /* Safari and Chrome */
     -o-transition: height 2s;
     /* Opera */
-    transition: height 0.1s linear  !important;
+
+
+
+}
+
+.price-all {
+    height: 100% !important;
+    background-color: red;
+    transition: height 1s linear  !important;
 
 }
 
@@ -36,6 +45,8 @@
 
 .price-list {
     padding: 200px 0;
+    /* height: 100% !important; */
+    transition: height 1s ease;
 }
 
 
@@ -59,4 +70,31 @@
 
 .col-price-list {
     margin-bottom: 40px;
+    transition: height 1s linear  !important;
+    
+}
+
+.show-more-btn-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.show-more-btn {
+    color: #a81d08 !important;
+    border-color: #a81d08 !important;
+}
+
+.show-more-btn:hover {
+    background-color: #a81d081c !important;
+}
+
+
+@media screen and (max-width: 768px) {
+    .price-list {
+        padding: 100px 0;
+        /* height: 100% !important; */
+        transition: height 1s ease;
+    }
+        
 }

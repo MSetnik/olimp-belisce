@@ -1,0 +1,25 @@
+.MuiButton-contained:hover {
+    background-color: rgb(226, 95, 95) !important;
+}
+
+.MuiTypography-body2 {
+    color: #a81d08 !important;
+    text-decoration-color: #a81d08 !important;
+
+} 
+
+.MuiTypography-body2:hover {
+    color: rgb(226, 95, 95) !important;
+} 
+
+.copyright-sign-in  {
+    color: rgb(117, 117, 117) !important;
+}
+
+.copyright-sign-in:hover {
+    color: rgb(117, 117, 117) !important;
+}
+
+.MuiOutlinedInput-input {
+    border-color: #a81d08 !important;
+}

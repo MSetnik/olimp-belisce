@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 
 import logo from "../../../assets/main-container/logo.png";
 
-import { FiMenu } from "react-icons/fi";
+import { FiMenu, FiUser } from "react-icons/fi";
 
 const Navbar = ({
   link1,
@@ -11,7 +11,13 @@ const Navbar = ({
   link3,
   link4,
   link5,
-  backgroundColor
+
+  link1href = "#about",
+  link2href = "#price-list",
+  link3href = "#bmi-calculator",
+  link4href = "#contact",
+  link5href = "#working-hours",
+  active = null
 }) => {
   let e;
 
@@ -43,46 +49,67 @@ const Navbar = ({
       });
     }, 200);
 
-    // for nav on click element
     const borderActive = document.querySelectorAll(".link-border-top");
     const link = document.querySelectorAll(".link");
 
-    link.forEach(v => {
-      v.addEventListener("click", () => {
-        borderActive.forEach(j => j.classList.remove("link-selected"));
-        const border = v.querySelectorAll(".link-border-top");
-        border[0].classList.add("link-selected");
+    if (active === null) {
+      // for nav on click element
+      link.forEach(v => {
+        v.addEventListener("click", () => {
+          borderActive.forEach(j => j.classList.remove("link-selected"));
+          const border = v.querySelectorAll(".link-border-top");
+          border[0].classList.add("link-selected");
+        });
       });
-    });
 
-    // for window scrolldown event
-    const mainSection = document.querySelectorAll(".scroll-content");
+      // for window scrolldown event
+      const mainSection = document.querySelectorAll(".scroll-content");
 
-    window.onscroll = () => {
-      const root = document.querySelectorAll("#root");
+      window.onscroll = () => {
+        mainSection.forEach((v, i) => {
+          const rect = v.getBoundingClientRect().y;
+          if (rect < window.innerHeight - 200) {
+            borderActive.forEach(v => v.classList.remove("link-selected"));
+            borderActive[i].classList.add("link-selected");
+          }
 
-      mainSection.forEach((v, i) => {
-        const rect = v.getBoundingClientRect().y;
-        if (rect < window.innerHeight - 200) {
-          borderActive.forEach(v => v.classList.remove("link-selected"));
-          borderActive[i].classList.add("link-selected");
-        }
+          if (window.pageYOffset <= 200) {
+            borderActive.forEach(v => v.classList.remove("link-selected"));
+          }
 
-        if (window.pageYOffset <= 200) {
-          borderActive.forEach(v => v.classList.remove("link-selected"));
-        }
+          if (window.pageYOffset >= 1600 && window.pageYOffset <= 2400) {
+            borderActive.forEach(v => v.classList.remove("link-selected"));
+          }
 
-        if (window.pageYOffset >= 1600 && window.pageYOffset <= 2400) {
-          borderActive.forEach(v => v.classList.remove("link-selected"));
-        }
+          if (window.pageYOffset >= document.body.scrollHeight - (window.innerHeight / 2) - 700) {
+            const workingHours = document.querySelector("#nav-link-working-hours");
+            borderActive.forEach(v => v.classList.remove("link-selected"));
+            borderActive[mainSection.length].classList.add("link-selected");
+          }
+        });
+      };
+    } else {
+      link.forEach((v, itemIndex) => {
+        // v.addEventListener("click", () => {
+        //   borderActive.forEach(j => j.classList.remove("link-selected"));
+        //   const border = v.querySelectorAll(".link-border-top");
+        //   border[0].classList.add("link-selected");
+        // });
 
-        if (window.pageYOffset >= document.body.scrollHeight - (window.innerHeight / 2) - 700) {
-          const workingHours = document.querySelector("#nav-link-working-hours");
-          borderActive.forEach(v => v.classList.remove("link-selected"));
-          borderActive[mainSection.length].classList.add("link-selected");
+        if (v.children[1].innerHTML === active) {
+          borderActive.forEach((j, borderIndex) => {
+            j.classList.remove("link-selected");
+
+            if (itemIndex === borderIndex) {
+              j.classList.add("link-selected");
+            }
+          });
         }
       });
-    };
+
+      // borderActive.forEach(j => j.classList.remove("link-selected"));
+      // const border = v.querySelectorAll(".link-border-top");
+    }
   }, []);
 
   return (
@@ -97,7 +124,7 @@ const Navbar = ({
         <div id="links-container">
           <div className='link'>
             <div className="link-border-top link-selected" />
-            <a href="#about">
+            <a href={link1href}>
               {link1}
             </a>
           </div>
@@ -105,31 +132,38 @@ const Navbar = ({
           <div className='link'>
             <div className="link-border-top" />
 
-            <a href="#price-list">
-              {link3}
-            </a>
-          </div>
-
-          <div className='link'>
-            <div className="link-border-top" />
-
-            <a href="#bmi-calculator">
+            <a href={link2href}>
               {link2}
             </a>
           </div>
+
           <div className='link'>
             <div className="link-border-top" />
-            <a href="#contact">
+
+            <a href={link3href}>
+              {link3}
+            </a>
+          </div>
+          <div className='link'>
+            <div className="link-border-top" />
+            <a href={link4href}>
               {link4}
             </a>
           </div>
 
           <div className='link'>
             <div id='nav-link-working-hours' className="link-border-top" />
-            <a href="#working-hours">
+            <a href={link5href}>
               {link5}
             </a>
           </div>
+        </div>
+
+        <div className='link link-login'>
+          <div id='nav-link-login' className="link-border-top" />
+          <a href="/login">
+            <FiUser color="white" size={24}/>
+          </a>
         </div>
 
       </div>

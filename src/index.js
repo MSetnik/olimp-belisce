@@ -4,10 +4,27 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+// React router
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+
+// Pages
+import Login from "./pages/login";
+import WorkoutPlan from "./pages/premium-user/workout-plan";
+import MealPlan from "./pages/premium-user/meal-plan";
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="login" element={<Login />} />
+      <Route path="workout-plan" element={<WorkoutPlan />} />
+      <Route path="meal-plan" element={<MealPlan />} />
+    </Routes>
+  </BrowserRouter>,
   document.getElementById("root")
 );
 
